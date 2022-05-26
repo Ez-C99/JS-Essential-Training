@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module demo</title>
+    <script src="script.js" defer></script> <!--DEFER-->
+  </head>
+  <body></body>
+</html>
+
+<!--
+  Moving script tag to end isn't actually solution, just a hack
+
+  By default, browser stops rendering when JS encountered. JS executed
+  before rendering continues (content blocking)
+
+
+  Solutions:
+
+  Async = Browser downloads JS in parallel while HTML renders. When JS loaded,
+          rendering stops while JS executed
+  - Dramatically shortens browser execution time  
+  - Good to parse ASAP without care for render blocking
+
+  Defer = Browser downloads JS in parallel while HTML renders, then defers JS
+          execution until HTML rendering complete
+
+ASNYC / DEFER SHOULD BE STANDARD
+
+-->

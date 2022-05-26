@@ -1,0 +1,82 @@
+Chapter 5: DOM
+
+
+Accessing elements:
+
+    querySelector + querySelectorAll = Climb through DOM with CSS queries (parameter)
+        - querySelector = first matching element
+
+        - querySelectorAll = list of all matching elements
+            - Can still target specifc items e.g. w/ .forEach()
+
+
+        Older methods:
+        getElementsByClassName() = array like object (string separated class names) of all nodes/child-elements matching query
+        - Can still get single element but comes as array you need to iterate through
+        
+        getElementById() = 
+
+
+Modify element classes:
+
+    Element.classList() = gives DOM token collection of all classes appended to element
+        - Work with each class individually without replacing whole className string
+
+        Class manipulation methods:
+        - classList.add()
+        - classList.remove()
+        - classList.toggle() = add if not there, remove if there
+        - classList.replace()
+
+    Element.className() = hold string listing all classes independent to an element
+    [property] (available for all DOM elements)
+        - Can assign class name but becomes problematic e.g. property w/ several classes and className used in CSS markup for class
+        - Use only when looking for string output of all classes
+
+
+Attributes:
+    Element.attributes = returns colleciton of all attribute nodes to a node (property) [NamedNodeMap, NOT array]
+    Methods:
+        - .hasAttribute() = check if attribute is there
+            ---> combine with querySelector to check existence of element with an attribute
+            document.querySelector('element e.g. img').hasAttribute('attr. e.g. src')
+
+        - .getAttribute() = see what attribute contains
+            ---> document.querySelector('').getAttribute('')
+        
+        - .setAttribute() = set attribute of element
+            ---> document.querySelector('').setAttribute('type','content')
+        
+        - .removeAttribute() = remove attribute from element
+            ---> document.querySelector('').removeAttribute('')
+
+
+Inline styles = CSS declarations inside element, stored in style property, accessed as regular property
+
+    ElementCSSInlineStyle.style()
+        - Combine with querySelector('class') to see/change styles for specific element
+        - add dot after style() to see see or change properties
+
+
+Add DOM elements:
+Good for elements that are being replaced -> content lost
+- Create new element, populate with lost content then append to DOM
+
+    Steps:
+    1. New element
+        document.createElement()
+    2. Add class to new element
+    3. Give ID to new element
+    4. set innerHTML to template literal
+    5. Append new element to exisiting element
+    ParentNode.append() = add new elelemnt after first child of parent node
+        - Here ParentNode = main
+        - main.append(newArticle)
+
+        - append() method: https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append
+        - prepend() method: https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend
+        - appendChild() method: https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+        - removeChild() method: https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
+        - replaceChild() method: https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild
+        - insertBefore() method: https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore 
+        - insertAdjacentElement() method: https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement

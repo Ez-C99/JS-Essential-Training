@@ -1,0 +1,27 @@
+
+Array ---> []
+    - Square bracket notation
+    - Can store any data type
+    - Select items/spaces by calling index number in square brackets(starts from 0)
+
+    Array.prototype.push()
+        Adds one or more elements to the end of an array, and returns the new length of the array.
+
+    Array.prototype.pop()
+        Removes the last element from an array and returns that element.
+
+    Array.prototype.shift()
+        Removes the first element from an array and returns that element.
+
+    Array.prototype.unshift()
+        Adds one or more elements to the front of an array, and returns the new length of the array.
+        
+    Array.prototype.sort()
+        Sorts the elements of an array in place and returns the array.
+        - Capitalised letters take precedence over lower case so make sure all data is same foramt
+
+    Array.prototype.indexOf()
+        Returns the first (least) index at which a given element can be found in the calling array.
+
+    Array.prototype.splice()
+        Adds and/or removes elements from an array.

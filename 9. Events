@@ -1,0 +1,9 @@
+Event listener structure:
+
+    target.addEventListener(target, callback[, options])
+
+        target:             event target
+        addEventListener:   event listener method
+        target:             event to be listened to
+        callback:           callback function to run when event triggered (called to listener and run inside)
+        options:            typically "false" or left blank (advanced feature)

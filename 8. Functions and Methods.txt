@@ -1,0 +1,168 @@
+
+Standard 'function' declaration has global scope 
+    - can be accidentally overwritten
+    - parsed in order written
+
+Function expression e.g. const (variable setup = anon function) --->  preferred way
+    - Same scope as variable type e.g. const exists locally + can never be overwritten
+
+Immediately Invoked Function Expression (IIFE) = run when declared without calling it
+    e.g:
+    // (function () {
+    //   let a = 4;
+    //   let b = 6;
+    //   let c = doSomeMath(a, b);
+    //   console.log(`The sum of a and b is: ${c}`);
+    // })();
+
+
+Arrow function = compact alternative to a traditional function expression, but is limited and can't be used in all situations.
+    - Can only be called after declaration
+    - Can't be used when there are declaring methods inside object
+
+    // Traditional Anonymous Function
+        function (a) {
+            return a + 100;
+        }
+
+    // Arrow Function Break Down
+    // 1. Remove the word "function" and place arrow between the argument and opening body bracket
+        (a) => {
+            return a + 100;
+        }
+
+    // 2. Remove the body braces and word "return" -- the return is implied.
+        (a) => a + 100;
+
+    // 3. Remove the argument parentheses
+        a => a + 100;
+
+
+Callback = function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+Logical Operators
+    &&
+        Logical AND.
+
+    ||
+        Logical OR.
+
+    ??
+        Nullish Coalescing Operator.
+
+Ternary operator
+    condition ? exprIfTrue : exprIfFalse
+
+Switch case statement
+    Syntax:
+        switch (expression) {
+        case value1:
+            //Statements executed when the
+            //result of expression matches value1
+            [break;]
+        ...
+        case valueN:
+            //Statements executed when the
+            //result of expression matches valueN
+            [break;]
+        [default:
+            //Statements executed when none of
+            //the values match the value of the expression
+            [break;]]
+        }
+    
+    Notes:
+    - Always add default in case of non-matching criteria to avoid infinite loop
+
+For Statements
+    For
+        for ([initialization]; [condition]; [final-expression]) {
+            statement
+        }
+    
+    For Of = Iterate through for amount of items in data structure/variable
+        for (variable of iterable) {
+            statement
+        }
+
+    For Each = Takes each item and performs action (function) on them (most popular method)
+
+        // Arrow function
+        forEach((element) => { /* ... */ })
+        forEach((element, index) => { /* ... */ })
+        forEach((element, index, array) => { /* ... */ })
+
+        // Callback function
+        forEach(callbackFn)
+        forEach(callbackFn, thisArg)
+
+        // Inline callback function
+        forEach(function(element) { /* ... */ })
+        forEach(function(element, index) { /* ... */ })
+        forEach(function(element, index, array){ /* ... */ })
+        forEach(function(element, index, array) { /* ... */ }, thisArg)
+
+        Notes:
+            callbackFn
+            Function to execute on each element.
+                The function is called with the following arguments:
+
+            element
+                The current element being processed in the array.
+
+            index
+                The index of element in the array.
+
+            array
+                The array forEach() was called upon.
+
+            thisArg Optional
+                Value to use as this when executing callbackFn.
+
+    For In = same as for of but with objects
+        for (variable in object) {
+            statement
+        }
+
+
+Map Method = creates a new array populated with the results of calling a provided function on every element in the calling array.
+    Syntax
+        // Arrow function
+        map((element) => { /* ... */ })
+        map((element, index) => { /* ... */ })
+        map((element, index, array) => { /* ... */ })
+
+        // Callback function
+        map(callbackFn)
+        map(callbackFn, thisArg)
+
+        // Inline callback function
+        map(function(element) { /* ... */ })
+        map(function(element, index) { /* ... */ })
+        map(function(element, index, array){ /* ... */ })
+        map(function(element, index, array) { /* ... */ }, thisArg)
+
+    Parameters
+        callbackFn
+            Function that is called for every element of arr. Each time callbackFn executes, the returned value is added to newArray.
+            The function is called with the following arguments:
+
+        element
+            The current element being processed in the array.
+
+        index
+            The index of the current element being processed in the array.
+
+        array
+            The array map was called upon.
+
+        thisArgOptional
+            Value to use as this when executing callbackFn.
+
+        Return value
+            A new array with each element being the result of the callback function.
+
+forEach vs map()
+    forEach:    when you want to iterate through array and output data immediately
+    map():      create new array out of old one and operate on items
+

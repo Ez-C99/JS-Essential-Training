@@ -1,0 +1,71 @@
+Chapter 6: Variables and Data Types
+
+var = classic variable container
+    - globally scoped --> scope issues
+    - mutable --> change value at any time and assign new value
+    - default if forget to declare type of variable being created
+    - can declare multiple in same statement, separated by comma
+
+let = locally block scoped variable container
+    - can't be called from outside local scope --> control of variable existence and use 
+    - use for changeable or mutable variables (default)
+
+const = unchageable block scoped variable
+    - value can't be reassigned to variable
+    - properties of object inside can still be changed
+
+==
+    - Equality operator
+    - Similar values on either side e.g. 5 and "5"
+
+!=
+    - Inequality operator
+
+=== 
+    - Strict equality operator
+    - Identical values on either side
+
+typeof
+    - The typeof operator determines the type of a given object.
+
++
+    - The unary plus operator converts its operand to Number type.
+
+-
+    - The unary negation operator converts its operand to Number type and then negates it.
+
+~
+    - Bitwise NOT operator.
+
+!
+    - Logical NOT operator.
+
++ (Plus)
+    - Addition operator.
+
+-
+    - Subtraction operator.
+
+/
+    - Division operator.
+
+*
+    - Multiplication operator.
+
+%
+    - Remainder operator.
+
+**
+    - Exponentiation operator.
+
+< (Less than)
+    - Less than operator.
+
+> (Greater than)
+    - Greater than operator.
+
+<=
+    - Less than or equal operator.
+
+>=
+    - Greater than or equal operator.
